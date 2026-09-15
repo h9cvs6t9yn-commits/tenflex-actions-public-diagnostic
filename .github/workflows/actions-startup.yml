@@ -1,0 +1,13 @@
+name: Actions Startup Diagnostic
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  startup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Prove job scheduling
+        run: |
+          echo "TENFLEX_PUBLIC_ACTIONS_DIAGNOSTIC=PASS"
+          uname -a
